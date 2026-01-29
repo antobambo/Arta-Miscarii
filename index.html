@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - ACS</title>
+    <title>Acasa</title>
     <link rel="icon" type="image/x-icon" href="logoACS.ico"> 
     <style>
         * {
@@ -154,6 +154,69 @@
         }
         .big-logo-img { max-width: 80%; max-height: 70vh; border-radius: 30px; }
         .close-overlay { position: absolute; top: 40px; right: 50px; font-size: 60px; color: #333; cursor: pointer; }
+        /* --- MOBILE RESPONSIVENESS REVIZUITĂ --- */
+@media (max-width: 768px) {
+    .top-bar {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80px; /* Înălțimea barei albe */
+        position: fixed;
+        top: 0;
+    }
+
+    .top-bar h1 {
+        font-size: 15px;
+        letter-spacing: 1px;
+        line-height: 1.2;
+        width: 50%;
+        text-align: center;
+    }
+
+    /* Aliniere fixă sus pentru ambele butoane */
+    .menu-btn, .corner-logo {
+        position: fixed;
+        top: 10px !important; /* Distanța de marginea de sus a ecranului */
+        width: 60px !important;
+        height: 60px !important;
+    }
+
+    .menu-btn {
+        left: 10px;
+        z-index: 1200;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .corner-logo {
+        right: 10px;
+        z-index: 998;
+    }
+
+    /* Forțăm imaginea logo-ului să fie egală cu butonul de meniu */
+    .corner-logo img {
+        width: 60px !important;
+        height: 60px !important;
+        top: 0 !important; /* Resetăm orice decalaj anterior */
+        right: 0 !important;
+    }
+
+    .bar { width: 25px; height: 2px; }
+
+    /* Ajustăm poziția de "Shift" pentru mobil */
+    .menu-btn.shifted {
+        left: calc(100% - 70px); 
+        top: 10px !important;
+    }
+
+    .sidebar {
+        width: 100%;
+        left: -100%;
+        padding: 120px 30px 40px;
+    }
+}
     </style>
 </head>
 <body>
@@ -182,7 +245,7 @@
     <nav class="sidebar" id="sidebar">
         <h2>Meniu</h2>
         <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Acasa</a></li>
             <li><a href="despre-noi.html">Despre noi</a></li>
             
             <li class="dropdown">
